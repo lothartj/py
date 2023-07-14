@@ -1,0 +1,19 @@
+{% comment %} <h1>Hi Lothar</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ model1.as_p }}
+    {{ model1.data}}
+    <button type="submit">Submit</button>
+</form> {% endcomment %}
+
+<h1>Hi Lothar</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ model1.as_p }}
+    <button type="submit">Submit</button>
+</form>
+
+{% for todo in todos %}
+    <p>{{ todo.title }} - {{ todo.description }}</p>
+{% endfor %}
+
