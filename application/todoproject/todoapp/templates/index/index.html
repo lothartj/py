@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Form</title>
+    <link rel="stylesheet" type="text/css" href={% static 'style/style.css' %}>
+</head>
+<body>
+
+    <div class='form'>
+        <form method="POST">
+            {% csrf_token %}
+            <h1 class='red'>Hi Lothar</h1>
+            <h3>NAME:</h3>
+            <div>{{ forms.name }}</div>
+            <h3>PASSWORD:</h3>
+            <div>{{ forms.password }}</div>
+
+            <div class='button'><button type="submit">SUBMIT</button></div>
+        </form>
+    </div>
+</body>
+</html>
