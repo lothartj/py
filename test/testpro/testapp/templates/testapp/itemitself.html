@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href=""><li>{{item.itemno}}</li></a>
+    <li>{{item.itemdescription}}</li>
+    <li>{{item.itembarcode}}</li>
+    <li>{{item.itembarcode}}</li>
+    <form method="POST" action="{% url 'itemdelete' item_id=item.id %}">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+</body>
+</html>

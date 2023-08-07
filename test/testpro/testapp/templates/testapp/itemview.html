@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        {% for item in items%}
+            <a href="{% url 'itemitself' item_id=item.id %}"><li>{{item.itemno}}</li></a>
+            <li>{{item.itemdescription}}</li>
+            <li>{{item.itembarcode}}</li>
+            <li>{{item.itembarcode}}</li>
+        {% endfor %}
+      
+</body>
+</html>
